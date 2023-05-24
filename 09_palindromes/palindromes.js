@@ -1,9 +1,11 @@
 const palindromes = function (string) {
-  // format to lower case, no space and no punctuation
-  let formatted = string.toLowerCase()
-    .replace(/[!@#$%^&*()_+., ]/g, '');
+  //format to lower case, no space and no punctuation
+  const formatted = string
+    .toLowerCase()
+    .replace(/[^a-z]/g, '');
 
-  let reversed = formatted.split('')
+  const reversed = formatted
+    .split('')
     .reverse()
     .join('')
 
