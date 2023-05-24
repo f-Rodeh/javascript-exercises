@@ -1,9 +1,7 @@
-const add = function() {
-	let result = 0;
-  for (const num of arguments) {
-    result += num;
-  }
-  return result;
+const add = function(...numbers) {
+  return numbers.reduce(( total, current ) => {
+    return total + current
+  }, 0 )
 };
 
 const subtract = function( num1, num2 ) {
@@ -11,19 +9,15 @@ const subtract = function( num1, num2 ) {
 };
 
 const sum = function(array) {
-	let result = 0;
-  for (const num of array){
-    result += num;
-  }
-  return result;
+	return array.reduce(( total, current ) => {
+    return total + current
+  }, 0)
 };
 
 const multiply = function(array) {
-  let result = 1;
-  for (const num of array){
-    result *= num;
-  }
-  return result;
+  return array.reduce(( total, current ) => {
+    return total * current;
+  }, 1)
 };
 
 const power = function(num1, num2) {
